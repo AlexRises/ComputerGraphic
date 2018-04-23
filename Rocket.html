@@ -1,0 +1,86 @@
+<canvas id="setka" width="400" height="400"></canvas>
+  
+		
+var c_canvas = document.getElementById("setka");
+var ctx = c_canvas.getContext("2d");
+
+for (var x = 0.5; x < 400; x += 10) {
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, 400);
+}
+
+for (var y = 0.5; y < 400; y += 10) {
+  ctx.moveTo(0, y);
+  ctx.lineTo(400, y);
+}
+
+ctx.strokeStyle = "#888";
+ctx.stroke();
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(200, 400);
+  ctx.lineTo(200, 0);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(0, 200);
+  ctx.lineTo(400, 200);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+
+ctx.beginPath();
+ctx.moveTo(200, 70);
+ctx.lineTo(150, 120);
+ctx.lineTo(150, 290);
+ctx.lineTo(250, 290);
+ctx.lineTo(250, 120);
+ctx.lineTo(200, 70);
+ctx.fillStyle = "#1488cc"
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(200, 150, 20, 0, Math.PI*2, true);
+ctx.fillStyle = "black"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(150, 120);
+ctx.lineTo(80, 170);
+ctx.lineTo(150, 170);
+ctx.fillStyle = "#a82828"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(150, 210);
+ctx.lineTo(80, 290);
+ctx.lineTo(150, 290);
+ctx.fillStyle = "#a82828"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(250, 120);
+ctx.lineTo(320, 170);
+ctx.lineTo(250, 170);
+ctx.fillStyle = "#a82828"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(250, 210);
+ctx.lineTo(320, 290);
+ctx.lineTo(250, 290);
+ctx.stroke();
+ctx.fillStyle = "#a82828"
+ctx.closePath();
+ctx.fill();

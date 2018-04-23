@@ -1,0 +1,57 @@
+
+ <style type="text/css">
+ canvas {
+  border: 1px solid black;
+ }
+</style>
+
+<canvas id="canvas" width="1000px" height="1000px"></canvas>
+<script type="text/javascript">
+ var height = 500;
+ var width = 700;
+
+ var canvas = document.getElementById('canvas');
+ var ctx = canvas.getContext('2d');
+
+ for (var x = 0.5; x < 800; x += 10) {
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, 800);
+}
+
+for (var y = 0.5; y < 800; y += 10) {
+  ctx.moveTo(0, y);
+  ctx.lineTo(800, y);
+}
+
+ctx.strokeStyle = "#888";
+ctx.stroke();
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(400, 800);
+  ctx.lineTo(400, 0);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(0, 400);
+  ctx.lineTo(800, 400);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+
+var imageData = ctx.getImageData(0,0,700,700);
+for(var x = 200; x< 500; x++) {
+ for(var y = 300;y<450;y++) {
+  var index = (y*imageData.width + x) * 4;
+  imageData.data[index+2]=128;
+  imageData.data[index+3]=255;
+  imageData.data[index]=128;
+ }
+}
+ctx.putImageData(imageData,0,0);
+
+</script>

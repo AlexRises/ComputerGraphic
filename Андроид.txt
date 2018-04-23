@@ -1,0 +1,165 @@
+<canvas id="setka" width="400" height="400"></canvas>
+  
+
+var c_canvas = document.getElementById("setka");
+var ctx = c_canvas.getContext("2d");
+
+for (var x = 0.5; x < 400; x += 10) {
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, 400);
+}
+
+for (var y = 0.5; y < 400; y += 10) {
+  ctx.moveTo(0, y);
+  ctx.lineTo(400, y);
+}
+
+ctx.strokeStyle = "#888";
+ctx.stroke();
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(200, 400);
+  ctx.lineTo(200, 0);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+for (var i = 0; i < 100; i++) {
+  ctx.beginPath();
+  ctx.moveTo(0, 200);
+  ctx.lineTo(400, 200);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+ctx.beginPath();
+ctx.arc(200, 150, 60, 0, Math.PI, true);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(180, 120, 5, 0, Math.PI*2, true);
+ctx.fillStyle = "#ffffff"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(220, 120, 5, 0, Math.PI*2, true);
+ctx.fillStyle = "#ffffff"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(140, 160);
+ctx.lineTo(260, 160);
+ctx.lineTo(260, 260);
+ctx.lineTo(140, 260);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(200, 242, 60, 0, Math.PI, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(120, 182, 10, 0, Math.PI, true);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(120, 230, 10, 0, Math.PI, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(110, 181);
+ctx.lineTo(130, 181);
+ctx.lineTo(130, 231);
+ctx.lineTo(110, 231);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(280, 182, 10, 0, Math.PI, true);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(270, 181);
+ctx.lineTo(290, 181);
+ctx.lineTo(290, 231);
+ctx.lineTo(270, 231);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(280, 230, 10, 0, Math.PI, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(175, 330, 10, 0, Math.PI, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(165, 330);
+ctx.lineTo(185, 330);
+ctx.lineTo(185, 280);
+ctx.lineTo(165, 280);
+ctx.fillStyle = "#2a8c12"
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(225, 330, 10, 0, Math.PI, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(215, 330);
+ctx.lineTo(235, 330);
+ctx.lineTo(235, 280);
+ctx.lineTo(215, 280);
+ctx.fillStyle = "#2a8c12";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(165, 100);
+ctx.lineTo(130, 60);
+ctx.strokeStyle = "#2a8c12";
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(135, 65, 10, 0, Math.PI*2, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(235, 100);
+ctx.lineTo(265, 60);
+ctx.stroke();
+ctx.strokeStyle = "#2a8c12";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(262, 65, 10, 0, Math.PI*2, false);
+ctx.fillStyle = "#2a8c12"
+ctx.closePath();
+ctx.fill();

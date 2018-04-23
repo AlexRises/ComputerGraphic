@@ -1,0 +1,54 @@
+<canvas id=pic width=512 height=512/>
+
+<script>
+
+var c=document.getElementById('pic')
+var ctx = c.getContext('2d')
+house()
+ctx.stroke()
+
+
+function house()
+{
+ctx.moveTo(150,50)
+ctx.lineTo(50,175)
+
+ctx.moveTo(150,50)
+ctx.lineTo(250,175)
+
+ctx.moveTo(50,175)
+ctx.lineTo(250,175)
+
+ctx.moveTo(50,175)
+ctx.lineTo(50,375)
+
+ctx.moveTo(50, 375)
+ctx.lineTo(250, 375)
+
+ctx.moveTo(250,175)
+ctx.lineTo(250,375)
+
+ctx.moveTo(100,225)
+ctx.lineTo(200,225)
+
+ctx.moveTo(100,325)
+ctx.lineTo(200,325)
+
+ctx.moveTo(100,225)
+ctx.lineTo(100,325)
+
+ctx.moveTo(200,225)
+ctx.lineTo(200,325)
+
+ctx.moveTo(200,75)
+ctx.lineTo(250,75)
+
+ctx.moveTo(200,75)
+ctx.lineTo(200,112)
+
+ctx.moveTo(250,75)
+ctx.lineTo(250,175)
+
+}
+
+</script>

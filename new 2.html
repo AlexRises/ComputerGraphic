@@ -1,0 +1,172 @@
+
+<style type="text/css">
+ canvas {
+  border: 1px solid black;
+ }
+</style>
+
+<canvas id="canvas" width="700px" height="500px"></canvas>
+<script type="text/javascript">
+ var height = 500;
+ var width = 700;
+
+ var canvas = document.getElementById('canvas');
+ var ctx = canvas.getContext('2d');
+
+ for (var x = 0.5; x < width; x += 10) {
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, height);
+ }
+
+ for (var y = 0.5; y < height; y += 10) {
+  ctx.moveTo(0, y);
+  ctx.lineTo(width, y);
+ }
+
+ ctx.strokeStyle = "#eee";
+ ctx.stroke();
+
+// y axis
+ ctx.beginPath();
+ ctx.strokeStyle = "#000";
+ ctx.moveTo(width/2, 0);
+ ctx.lineTo(width/2, height);
+ ctx.stroke();
+// x axis
+
+ ctx.beginPath();
+ ctx.strokeStyle = "#000";
+ ctx.moveTo(0, height/2);
+ ctx.lineTo(width, height/2);
+ ctx.stroke();
+ 
+ // coordinates x
+ var digit;
+
+ for (var i = 0 ; i < width; i+= 10) {
+  ctx.moveTo(i,height/2);
+  ctx.beginPath()
+  ctx.arc(i,height/2,2,0,2*Math.PI);
+  ctx.fill();
+  // ctx.font = '5px';
+  
+  // if(i<100){
+  //  digit = (''+i)[0];
+  // } else {
+  //  digit = (''+i)[0]+('' + i)[1];
+  // }
+  
+  // if(digit%2==0) {
+  // // ctx.fillText(i,i-5,height/2 - 15);
+  // } else {
+  //  if(digit%5==0)
+  //  ctx.fillText(i,i-5,height/2 + 15);
+  // }
+ }
+
+ //coordinates y
+
+ for (var i = 0 ; i < height; i+= 10) {
+  ctx.moveTo(width/2,i);
+  ctx.beginPath()
+  ctx.arc(width/2,i,2,0,2*Math.PI);
+  ctx.fill();
+ }
+
+//circle bisie
+
+ctx.beginPath()
+ctx.moveTo(240, 190);
+ctx.quadraticCurveTo(220, 160, 270, 170);
+ctx.quadraticCurveTo(270, 110, 320, 160);
+ctx.quadraticCurveTo(360, 110, 370, 160);
+ctx.quadraticCurveTo(430, 130, 415, 180);
+ctx.quadraticCurveTo(470, 200, 415, 230);
+ctx.quadraticCurveTo(460, 280, 390, 290);
+ctx.quadraticCurveTo(370, 330, 340, 290);
+ctx.quadraticCurveTo(320, 340, 280, 280);
+ctx.quadraticCurveTo(220, 310, 230, 240);
+ctx.quadraticCurveTo(180, 200, 240, 190);
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath()
+ctx.moveTo(380, 200);
+ctx.arc(380, 200, 10, 0, Math.PI*2);
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath()
+ctx.moveTo(280, 200);
+ctx.arc(280, 200, 10, 0, Math.PI*2);
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(280, 140);
+ctx.quadraticCurveTo(180, 90, 220, 60);
+ctx.quadraticCurveTo(260, 30, 270, 90);
+ctx.quadraticCurveTo(320, 60, 280, 140);
+
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(415, 150);
+ctx.quadraticCurveTo(350, 90, 380, 60);
+ctx.quadraticCurveTo(400, 30, 430, 90);
+ctx.quadraticCurveTo(450, 60, 415, 150);
+
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(415, 150);
+ctx.quadraticCurveTo(350, 90, 380, 60);
+ctx.quadraticCurveTo(400, 30, 430, 90);
+ctx.quadraticCurveTo(450, 60, 415, 150);
+
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(205, 210);
+ctx.quadraticCurveTo(130,270, 115, 210);
+ctx.quadraticCurveTo(130,170, 205, 210);
+
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(440, 210);
+ctx.quadraticCurveTo(470,270, 530, 210);
+ctx.quadraticCurveTo(470,170, 440, 210);
+
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ctx.beginPath();
+ctx.moveTo(300, 305);
+ctx.quadraticCurveTo(255,330, 280, 370);
+ctx.quadraticCurveTo(345,330, 300, 305);
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.moveTo(370, 310);
+ctx.quadraticCurveTo(325,330, 390, 370);
+ctx.quadraticCurveTo(415,330, 370, 310);
+ctx.stroke();
+ctx.strokeStyle= "red";
+ctx.closePath();
+
+ 
+</script>

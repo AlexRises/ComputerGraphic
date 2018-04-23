@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>rectExample</title>
+        <meta charset='utf-8' />
+    </head>
+    <body>
+        <canvas id='example'>Обновите браузер</canvas>
+        <script>
+            var example = document.getElementById("example"),
+			    ctx     = example.getContext('2d');
+            example.width  = 640;
+            example.height = 640;
+            ctx.strokeStyle = '#000000'; // меняем цвет рамки
+	    ctx.arc(100, 50, 10,  Math.PI,  0, true);
+	    ctx.arc(100, 50, 10, 0, Math.PI,  true);
+	    ctx.moveTo(290,50);
+	    ctx.arc(300, 50, 10,  Math.PI,  0, true);
+	    ctx.arc(300, 50, 10, 0, Math.PI,  true);
+	    ctx.moveTo(293, 57);
+	    ctx.lineTo(200,150);
+	    ctx.moveTo(107, 57);
+	    ctx.lineTo(200,150);
+	    ctx.moveTo(100,200);
+	    ctx.lineTo(150,150);
+	    ctx.lineTo(250,150);
+	    ctx.lineTo(300,200);
+            ctx.strokeRect(100,200,200,250);
+	    ctx.moveTo(100,250);
+	    ctx.arc(100,300,50,Math.PI/2,3*Math.PI/2,false);
+	    ctx.moveTo(300,250);
+	    ctx.arc(300,300,50,Math.PI/2,3*Math.PI/2,true);
+	    ctx.moveTo(130,450);
+	    ctx.arc(150,450,25,Math.PI,0,true);
+	    ctx.moveTo(230,450);
+	    ctx.arc(250,450,25,Math.PI,0,true);
+	    ctx.moveTo(160,175);
+	    ctx.lineTo(180,175);
+            ctx.moveTo(220,175);
+	    ctx.lineTo(240,175);
+	    ctx.moveTo(230,165);
+	    ctx.lineTo(230,185);
+            
+            ctx.stroke();// *22	
+        </script>
+    </body>
+</html>
